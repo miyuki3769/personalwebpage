@@ -1,6 +1,17 @@
 h2 {
-    color: limegreen;
+    color: #7A991A;
     text-align: center;
+}
+
+h3 {
+    color: darkgray;
+    text-align: right;
+    font-weight: bold;
+}
+
+p {
+    color: darkgrey;
+    text-align: right;
 }
 
 html {
