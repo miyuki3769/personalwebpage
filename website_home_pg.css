@@ -1,11 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
 h2 {
     color: #7A991A;
-    text-align: center;
 }
 
 h3 {
     color: darkgray;
-    text-align: right;
     font-weight: bold;
 }
 
@@ -14,6 +16,50 @@ p {
     text-align: right;
 }
 
-html {
+html,
+body {
     background-color: #834040;
+    font-family: 'Roboto', sans-serif;
+}
+
+.pg-title {
+    text-align: center;
+}
+
+.row {
+    width: 100%;
+    text-align: center;
+}
+
+.half-row {
+    margin: 0 auto;
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+}
+
+.about-text {
+    text-align: center;
+}
+
+.about-text br {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    border: 2px #331a00 solid;
+}
+
+@media(max-width: 760px) {
+    .half-row {
+        display: block;
+        width: 100%;
+    }
+    .profile-img {
+        border-radius: 50%;
+        width: 75%;
+    }
 }
