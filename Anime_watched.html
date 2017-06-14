@@ -3,24 +3,196 @@
 
 <head>
     <title>Anime's Watched</title>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="website_home_pg.css">
+    <link rel="stylesheet" type="text/css" href="nav.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/query-result/0.1.3/query-result.js"></script>
 </head>
 
 <body>
-    <br><br>
-    <h2>Anime I've Watched</h2>
-    <br>
-    <object type="text/html" data="navigation.html">
-    </object>
-    <br>
-    <ol>
-        <h3>Romance</h3>
-        <li>Lovely Complex</li>
-        <li>Ouran Host Club</li>
-        <li>Say I Love You</li>
-        <li>Your Lie in April</li>
-    </ol>
-    <ol>
-        <h3>Reverse Harem</h3>
-        <li>Diabolik Lovers</li>
-        <li>Brothers Conflict</li>
+    <div id="fixedheader">
+        <nav>
+            <ul class="navig">
+                <li><a class="navlink" href="Website.html">About Me</a></li>
+                <li><a class="navlink" href="Anime_watched.html">Anime</a></li>
+                <li><a class="navlink" href="Manga_read.html">Manga</a></li>
+                <li><a class="navlink" href="Manga_read.html">TV Shows</a></li>
+                <li><a class="navlink" href="Manga_read.html">Projects</a></li>
+                <li><a class="navlink" href="Manga_read.html">Art Gallery</a></li>
+                <li><a class="navlink" href="Manga_read.html">Resume</a></li>
+                <li><a class="navlink" href="Manga_read.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br><br><br><br>
+    <div class="container">
+        <h2 class="pg-title">Anime I've Watched</h2>
+        <div class="row">
+            <div class="item-list column third-row">
+                <h3 class="item-header">Romance</h3>
+                <ol>
+                    <li>Lovely Complex</li>
+                    <li>Kimi no Na Wa</li>
+                    <li>Say I Love You</li>
+                    <li>Clannad</li>
+                    <li>Clannad After Story</li>
+                    <li>Kamisama Hajimemashite</li>
+                    <li>Monthly Girl's Nazaki-kun</li>
+                    <li>Kimi ni Todoke</li>
+                    <li>Akagami no Shiragukihime</li>
+                    <li>Gosick</li>
+                    <li>Nisekoi</li>
+                    <li>Tonari no Kaibutsu-kun</li>
+                    <li>Full Moon</li>
+                </ol>
+                <input type="text" id="romance-input" />
+                <button type="button" title="Add" id="romance-button">Add</button>
+            </div>
+            <div class="item-list column third-row">
+                <h3 class="item-header">Reverse Harem</h3>
+                <ol>
+                    <li>Diabolik Lovers</li>
+                    <li>Brothers Conflict</li>
+                    <li>Yona of the Dawn</li>
+                    <li>Ouran High School Host Club</li>
+                    <li>Fruits Basket</li>
+                    <li>Hakuouki</li>
+                    <li>Uta no Prince-Sama</li>
+                    <li>Kamigami no Asobi</li>
+                    <li>Hiiro no Kakera</li>
+                    <li>Dance with Devils</li>
+                    <li>Bonjour Sweet Love Patisserie</li>
+                    <li>Amnesia</li>
+                    <li>Ensemble Stars!</li>
+            </div>
+            <div class="item-list column third-row">
+                <h3 class="item-header">Slice of Life</h3>
+                <ol>
+                    <li>Lucky Star</li>
+                    <li>K-on</li>
+                    <li>School Rumble</li>
+            </div>
+            <div class="item-list column third-row">
+                <h3 class="item-header">Action/Adventure</h3>
+                <ol>
+                    <li>Full Metal Alchemist</li>
+                    <li>Full Metal Alchemist: Brotherhood</li>
+                    <li>HunterXHunter</li>
+                    <li>Seven Deadly Sins</li>
+                    <li>One Piece</li>
+                    <li>Durarara!!</li>
+                    <li>Trigun</li>
+                    <li>Kenichi</li>
+                    <li>Pokemon</li>
+                    <li>Bakugan</li>
+                    <li>Kill La Kill</li>
+            </div>
+            <div class="item-list column third-row">
+                <h3 class="item-header">Idols</h3>
+                <ol>
+                    <li>Love Live!</li>
+                    <li>Id@lMaster</li>
+            </div>
+            <div class="item-list column third-row">
+                <h3 class="item-header">Supernatural</h3>
+                <ol>
+                    <li>Noragami</li>
+                    <li>Noragami Aragato</li>
+                    <li>Black Butler</li>
+                    <li>Death Note</li>
+                    <li>Ghost Hunt</li>
+                    <li>Angel Beats!</li>
+                    <li>Blue Exorcist</li>
+                    <li>Soul Eater</li>
+            </div>
+            <div class="item-list column third-row">
+                <h3 class="item-header">Magical Girl</h3>
+                <ol>
+                    <li>Mahou Shoujo Madoka Magica</li>
+                    <li>Tokyo Mew Mew</li>
+                    <li>Mermaid Melody</li>
+                    <li>Sailor Moon</li>
+                    <li>Glitter Force</li>
+                    <li>Pre-Cure</li>
+                    <li>Sakura Cardcaptor</li>
+                    <li>Power Puff Girls Z</li>
+            </div>
+            <div class="item-list column third-row">
+                <h3 class="item-header">Horror</h3>
+                <ol>
+                    <li>Attack on Titan</li>
+                    <li>Higurashi</li>
+                    <li>Corpse Party</li>
+                    <li>Dead Man Wonderland</li>
+            </div>
+            <div class="item-list column third-row">
+                <h3 class="item-header">Comedy</h3>
+                <ol>
+                    <li>Hetalia</li>
+                    <li>Sergeant Frog</li>
+            </div>
+            <div class="item-list column third-row">
+                <h3 class="item-header">Studio Ghibli/Hayoa Miyazaki</h3>
+                <ol>
+                    <li>Spirited Away</li>
+                    <li>Kiki's Delivery Service</li>
+                    <li>Naasica of the Valley of the Wind</li>
+                    <li>Princess Mononoke</li>
+                    <li>Princess Kaguya</li>
+                    <li>Howl's Moving Castle</li>
+                    <li>Castle in the Sky</li>
+                    <li>Ponyo</li>
+                    <li>Secret World of Arrietty</li>
+                    <li>Whisper of the Heart</li>
+                    <li>The Cat Returns</li>
+                    <li>When Marnie was There</li>
+                    <li>Castle of Cagliostro</li>
+                    <li>My Neighbor Totoro</li>
+            </div>
+            <div class="item-list column third-row">
+                <h3 class="item-header">Magic/Fantasy</h3>
+                <ol>
+                    <li>Fate/Zero</li>
+                    <li>Fate/Stay Night</li>
+                    <li>Magi: The Labyrinth of Magic</li>
+                    <li>Shugo Chara</li>
+                    <li>Fairy Tail</li>
+                    <li>No Game No Life</li>
+                    <li>Shakugan no Shana</li>
+                    <li>The Familiar of Zero</li>
+                    <li>Spice and Wolf</li>
+                    <li>Tsubasa Chronicle</li>
+                    <li>Inuyasha</li>
+                    <li>Gakuen Alice</li>
+            </div>
+            <div class="item-list column third-row">
+                <h3 class="item-header">Sports</h3>
+                <ol>
+                    <li>Yuri!! On Ice</li>
+                    <li>Chihayafuru</li>
+                    <li>Ace of Diamonds</li>
+                    <li>Free!</li>
+            </div>
+            <div class="item-list column third-row">
+                <h3 class="item-header">Sci-fi</h3>
+                <ol>
+                    <li>Psycho-Pass</li>
+                    <li>SAO</li>
+                    <li>GGO</li>
+                    <li>Red-Data Girl</li>
+                    <li>Elfen Lied</li>
+                    <li>Black Rock Shooter</li>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <div id="fixedfooter">Miyuki3769 Copyright 2017 ---------------------------------------------------------------------------------------------------------------------------------------------------------------- Watch me on <a class="links" href="http://miyuki3769.deviantart.com">Deviantart</a>        or subscribe to my
+        <a class="links" href="https://www.youtube.com/channel/UCoElHIL1t1itG-3oZw7UImg">Youtube</a> channel!</div>
+    <script type="text/javascript">
+        $("#romance-button").on("click", function() {
+            alert("hello");
+        })
+    </script>
+</body>
+
+</html>

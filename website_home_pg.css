@@ -7,7 +7,8 @@ h2 {
 }
 
 h3 {
-    color: darkgray;
+    color: #7A991A;
+    text-shadow: 2px 2px 5px #330000;
     font-weight: bold;
 }
 
@@ -24,6 +25,7 @@ body {
 
 .pg-title {
     text-align: center;
+    text-shadow: 2px 2px 5px #330000;
 }
 
 .row {
@@ -32,19 +34,31 @@ body {
 }
 
 .half-row {
+    width: 45%;
+}
+
+.third-row {
+    width: 24%;
+}
+
+.column {
     margin: 0 auto;
     display: inline-block;
-    width: 45%;
     vertical-align: top;
 }
 
 .about-text {
     text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 26px;
+    color: #7A991A;
+    text-shadow: 2px 4px 5px black;
 }
 
-.about-text br {
-    margin-bottom: 20px;
-    display: block;
+.links {
+    display: #FFFFFF;
+    color: #7A991A;
+    text-decoration: none;
 }
 
 .profile-img {
@@ -53,10 +67,41 @@ body {
     border: 2px #331a00 solid;
 }
 
+div#fixedheader {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    color: #CCC;
+    background: #333;
+    padding: 20px;
+}
+
+div#fixedfooter {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    color: #CCC;
+    background: #333;
+    padding: 8px;
+}
+
+.item-list {
+    text-align: left;
+}
+
+.item-list .item-header {
+    padding-left: 25px;
+}
+
 @media(max-width: 760px) {
     .half-row {
         display: block;
         width: 100%;
+    }
+    .third-row {
+        width: 45%;
     }
     .profile-img {
         border-radius: 50%;
