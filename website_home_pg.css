@@ -95,6 +95,14 @@ div#fixedfooter {
     padding-left: 25px;
 }
 
+.form-sub {
+    padding-left: 110px;
+}
+
+.wrapper {
+    text-align: center;
+}
+
 @media(max-width: 760px) {
     .half-row {
         display: block;

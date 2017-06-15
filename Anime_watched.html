@@ -27,10 +27,16 @@
     <br><br><br><br>
     <div class="container">
         <h2 class="pg-title">Anime I've Watched</h2>
+        <div class='wrapper'>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <input type="text" id="add_title" placeholder="Anime Title">
+            <input type="text" id="add_listid" placeholder="#ListID">
+            <input type="button" id="add_anime" value="Add Anime">
+        </div>
         <div class="row">
             <div class="item-list column third-row">
                 <h3 class="item-header">Romance</h3>
-                <ol>
+                <ol id="romance">
                     <li>Lovely Complex</li>
                     <li>Kimi no Na Wa</li>
                     <li>Say I Love You</li>
@@ -45,12 +51,10 @@
                     <li>Tonari no Kaibutsu-kun</li>
                     <li>Full Moon</li>
                 </ol>
-                <input type="text" id="romance-input" />
-                <button type="button" title="Add" id="romance-button">Add</button>
             </div>
             <div class="item-list column third-row">
                 <h3 class="item-header">Reverse Harem</h3>
-                <ol>
+                <ol id="reverse-harem">
                     <li>Diabolik Lovers</li>
                     <li>Brothers Conflict</li>
                     <li>Yona of the Dawn</li>
@@ -67,14 +71,14 @@
             </div>
             <div class="item-list column third-row">
                 <h3 class="item-header">Slice of Life</h3>
-                <ol>
+                <ol id="slice-life">
                     <li>Lucky Star</li>
                     <li>K-on</li>
                     <li>School Rumble</li>
             </div>
             <div class="item-list column third-row">
                 <h3 class="item-header">Action/Adventure</h3>
-                <ol>
+                <ol id="action-adventure">
                     <li>Full Metal Alchemist</li>
                     <li>Full Metal Alchemist: Brotherhood</li>
                     <li>HunterXHunter</li>
@@ -89,13 +93,13 @@
             </div>
             <div class="item-list column third-row">
                 <h3 class="item-header">Idols</h3>
-                <ol>
+                <ol id="idols">
                     <li>Love Live!</li>
                     <li>Id@lMaster</li>
             </div>
             <div class="item-list column third-row">
                 <h3 class="item-header">Supernatural</h3>
-                <ol>
+                <ol id="supernatural">
                     <li>Noragami</li>
                     <li>Noragami Aragato</li>
                     <li>Black Butler</li>
@@ -107,7 +111,7 @@
             </div>
             <div class="item-list column third-row">
                 <h3 class="item-header">Magical Girl</h3>
-                <ol>
+                <ol id="magical-girl">
                     <li>Mahou Shoujo Madoka Magica</li>
                     <li>Tokyo Mew Mew</li>
                     <li>Mermaid Melody</li>
@@ -119,7 +123,7 @@
             </div>
             <div class="item-list column third-row">
                 <h3 class="item-header">Horror</h3>
-                <ol>
+                <ol id="horror">
                     <li>Attack on Titan</li>
                     <li>Higurashi</li>
                     <li>Corpse Party</li>
@@ -127,13 +131,13 @@
             </div>
             <div class="item-list column third-row">
                 <h3 class="item-header">Comedy</h3>
-                <ol>
+                <ol id="comedy">
                     <li>Hetalia</li>
                     <li>Sergeant Frog</li>
             </div>
             <div class="item-list column third-row">
                 <h3 class="item-header">Studio Ghibli/Hayoa Miyazaki</h3>
-                <ol>
+                <ol id="studio-ghibli">
                     <li>Spirited Away</li>
                     <li>Kiki's Delivery Service</li>
                     <li>Naasica of the Valley of the Wind</li>
@@ -151,7 +155,7 @@
             </div>
             <div class="item-list column third-row">
                 <h3 class="item-header">Magic/Fantasy</h3>
-                <ol>
+                <ol id="magic-fantasy">
                     <li>Fate/Zero</li>
                     <li>Fate/Stay Night</li>
                     <li>Magi: The Labyrinth of Magic</li>
@@ -167,7 +171,7 @@
             </div>
             <div class="item-list column third-row">
                 <h3 class="item-header">Sports</h3>
-                <ol>
+                <ol id="sports">
                     <li>Yuri!! On Ice</li>
                     <li>Chihayafuru</li>
                     <li>Ace of Diamonds</li>
@@ -175,7 +179,7 @@
             </div>
             <div class="item-list column third-row">
                 <h3 class="item-header">Sci-fi</h3>
-                <ol>
+                <ol id="sci-fi">
                     <li>Psycho-Pass</li>
                     <li>SAO</li>
                     <li>GGO</li>
@@ -189,8 +193,15 @@
     <div id="fixedfooter">Miyuki3769 Copyright 2017 ---------------------------------------------------------------------------------------------------------------------------------------------------------------- Watch me on <a class="links" href="http://miyuki3769.deviantart.com">Deviantart</a>        or subscribe to my
         <a class="links" href="https://www.youtube.com/channel/UCoElHIL1t1itG-3oZw7UImg">Youtube</a> channel!</div>
     <script type="text/javascript">
-        $("#romance-button").on("click", function() {
-            alert("hello");
+        $(document).ready(function() {
+            $('#add_anime').click(function() {
+                var task = $('#add_title').val();
+                var html = '<li><span>' + task + '</span></li>';
+                var listid = $('#add_listid').val();
+                $(listid).append(html);
+                document.getElementById("add_title").value = "";
+                document.getElementById("add_listid").value = "";
+            })
         })
     </script>
 </body>
