@@ -195,14 +195,64 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#add_anime').click(function() {
-                var task = $('#add_title').val();
-                var html = '<li><span>' + task + '</span></li>';
+                var title = $('#add_title').val();
+                var html = '<li><span>' + title + '</span></li>';
                 var listid = $('#add_listid').val();
+
+                function add() {
+                    var title = document.getElementById('add_title').value;
+
+                    var animeTitle = get_animeTitle();
+                    animeTitle.push(title);
+                    localStorage.setItem('anime', JSON.stringify(animeTitle));
+
+                    show();
+                }
+
+                function show() {
+                    var animeTitle = get_animeTitle();
+
+                    var html = '<ul>';
+                    for (var i = 0; i < animeTitle.length; i++) {
+                        html += '<li>' + animeTitle[i] + '<button class="remove" id="' + i + '">x</button></li>';
+                    };
+                    html += '</ul>';
+
+                    document.getElementById('animeTitle').innerHTML = html;
+
+                    var buttons = document.getElementsByClassName('remove');
+                    for (var i = 0; i < buttons.length; i++) {
+                        buttons[i].addEventListener('click', remove);
+                    };
+                }
+
                 $(listid).append(html);
+
                 document.getElementById("add_title").value = "";
                 document.getElementById("add_listid").value = "";
             })
         })
+
+
+        function remove() {
+            var id = this.getAttribute('id');
+            var animeTitle = get_animeTitle();
+            animeTitle.splice(id, 1);
+            localStorage.setItem('anime', JSON.stringify(animeTitle));
+
+            show();
+
+            return false;
+        }
+
+        function get_animeTitle() {
+            var animeTitle = new Array;
+            var animeTitle_str = localStorage.getItem('todo');
+            if (animeTitle_str != null) {
+                animeTitle = JSON.parse(animeTitle_str);
+            }
+            return animeTitle;
+        }
     </script>
 </body>
 

@@ -1,0 +1,4 @@
+#add_title = title of anime
+#add_listid = this is the list the anime should go under - it should be written with a # in front (there are codes for each list)
+#add_anime = this id is to a button that adds the title under the list that it is designated to 
+#romance = id of the romance list 
